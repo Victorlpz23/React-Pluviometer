@@ -1,8 +1,12 @@
 import React from 'react'
 
-function CitySelector() {
+function CitySelector({ cities, selectedCity, onChangeCity }) {
   return (
-    <div>CitySelector</div>
+    <select className='form-select'>
+      {cities.map((city) =>
+        <option selected>{city}</option>
+      )}
+    </select>
   )
 }
 
