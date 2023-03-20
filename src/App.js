@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Pluviometer />
-      <CitySelector cities={cities} />
+      <CitySelector cities={cities} selectedCity="Madrid"/>
     </div>
   );
 }
