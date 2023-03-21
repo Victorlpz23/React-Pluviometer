@@ -7,7 +7,7 @@ function DateSelector({ selectedDate, onDateChange }) {
     <div className='row border p-3 fixed-bottom'>
       {options.map((option) => (
         <div
-          onClick={() => onDateChange(option)} 
+          onClick={() => onDateChange(option)}
           key={option}
           className={`col text-center ${selectedDate === option ? "text-primary" : ""}`}
         >

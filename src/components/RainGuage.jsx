@@ -1,6 +1,10 @@
 import React from 'react'
 
 function RainGuage({ litres }) {
+  if (litres === undefined) {
+    return <div className='p-3'>Loading...</div>
+  }
+
   return (
     <div className='m-3'>
       <h4 className='text-center'>{litres} Litres</h4>
@@ -11,7 +15,7 @@ function RainGuage({ litres }) {
         aria-valuemin="0"
         aria-valuemax="100"
       >
-        <div className='progress-bar w-75'></div>
+        <div className='progress-bar' style={{ width: `${litres}%` }}></div>
       </div>
     </div>
   );
